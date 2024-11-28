@@ -16,6 +16,15 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\TinoTesla\TinoTeslaMain.cpp">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\NeiPan\NeiPanMain.cpp">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\NeiPan\Player.cpp">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h">
@@ -36,6 +45,15 @@
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\TinoTesla\TinoTeslaMain.h">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NeiPan\NeiPanMain.h">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NeiPan\Player.h">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="J:\Dev\Projects\Trapcore\CMakeLists.txt" />
@@ -55,5 +73,51 @@
     <Filter Include="Source Files\proj.win32\Classes">
       <UniqueIdentifier>{09996233-8494-3446-ACA8-64486FC2705A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\Enemies">
+      <UniqueIdentifier>{4e06140d-33d7-4ed2-9069-ff5b11396bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\Levels">
+      <UniqueIdentifier>{b19d950b-d8eb-4b20-b197-a1d8372b777e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\NeiPan">
+      <UniqueIdentifier>{9d942439-b157-462f-9982-d8be13a2bc88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\TinoTesla">
+      <UniqueIdentifier>{ef22a8d4-2e82-4ec3-94c3-d325c32b41d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Resources">
+      <UniqueIdentifier>{0f252301-cc7c-4daf-8a14-fb3feac0d968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Resources\fonts">
+      <UniqueIdentifier>{982f53e2-c513-46b1-8b4c-c78e95466096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Resources\res">
+      <UniqueIdentifier>{d593ba14-984b-41e0-b5c1-f4e3a7337f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Resources\Sprites">
+      <UniqueIdentifier>{58041d9c-c84b-4325-b15a-2c269232012c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Scripts">
+      <UniqueIdentifier>{32356336-e35d-4144-9021-76ab688c2481}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\CloseNormal.png">
+      <Filter>Source Files\proj.win32\Resources</Filter>
+    </Image>
+    <Image Include="Resources\CloseSelected.png">
+      <Filter>Source Files\proj.win32\Resources</Filter>
+    </Image>
+    <Image Include="Resources\HelloWorld.png">
+      <Filter>Source Files\proj.win32\Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\fonts\arial.ttf">
+      <Filter>Source Files\proj.win32\Resources\fonts</Filter>
+    </Font>
+    <Font Include="Resources\fonts\Marker Felt.ttf">
+      <Filter>Source Files\proj.win32\Resources\fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>
