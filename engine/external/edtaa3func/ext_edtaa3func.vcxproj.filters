@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\edtaa3func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A45AEE82-3599-3D8D-9F94-B26DB3464C20}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F420F0A-7418-3F69-A614-8612A3EC7B72}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>Trapcore</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\bin\Trapcore\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Trapcore.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Trapcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\bin\Trapcore\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Trapcore.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Trapcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\bin\Trapcore\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Trapcore.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Trapcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\bin\Trapcore\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Trapcore.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Trapcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/Box2D/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/chipmunk/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/freetype2/include/win32/freetype2" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include/bullet" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/jpeg/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/openssl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/uv/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/webp/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/websockets/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/curl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/png/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/glfw3/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/uv/prebuilt/win32/uv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/websockets/prebuilt/win32/websockets.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/curl/prebuilt/win32/libcurl.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Debug\cocos2d.lib;lib\Debug\external.lib;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\prebuilt\win32\debug\libbox2d.lib;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\prebuilt\win32\debug\libbullet.lib;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\webp\prebuilt\win32\libwebp.lib;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\prebuilt\win32\websockets.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libssl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;J:\Dev\Projects\Trapcore\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;J:\Dev\Projects\Trapcore\cocos2d\external\curl\prebuilt\win32\libcurl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\png\prebuilt\win32\libpng.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>J:/Dev/Projects/Trapcore/proj.win32/Debug/Trapcore.lib</ImportLibrary>
+      <ProgramDataBaseFile>J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/Trapcore.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/Box2D/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/chipmunk/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/freetype2/include/win32/freetype2" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include/bullet" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/jpeg/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/openssl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/uv/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/webp/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/websockets/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/curl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/png/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/glfw3/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/uv/prebuilt/win32/uv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/websockets/prebuilt/win32/websockets.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/curl/prebuilt/win32/libcurl.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\cocos2d.lib;lib\Release\external.lib;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\webp\prebuilt\win32\libwebp.lib;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\prebuilt\win32\websockets.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libssl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;J:\Dev\Projects\Trapcore\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;J:\Dev\Projects\Trapcore\cocos2d\external\curl\prebuilt\win32\libcurl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\png\prebuilt\win32\libpng.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>J:/Dev/Projects/Trapcore/proj.win32/Release/Trapcore.lib</ImportLibrary>
+      <ProgramDataBaseFile>J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/Trapcore.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/Box2D/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/chipmunk/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/freetype2/include/win32/freetype2" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include/bullet" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/jpeg/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/openssl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/uv/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/webp/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/websockets/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/curl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/png/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/glfw3/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/uv/prebuilt/win32/uv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/websockets/prebuilt/win32/websockets.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/curl/prebuilt/win32/libcurl.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\MinSizeRel\cocos2d.lib;lib\MinSizeRel\external.lib;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\MinSizeRel\ext_recast.lib;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\webp\prebuilt\win32\libwebp.lib;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\prebuilt\win32\websockets.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libssl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;J:\Dev\Projects\Trapcore\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\MinSizeRel\ext_tinyxml2.lib;lib\MinSizeRel\ext_xxhash.lib;lib\MinSizeRel\ext_xxtea.lib;lib\MinSizeRel\ext_clipper.lib;lib\MinSizeRel\ext_edtaa3func.lib;lib\MinSizeRel\ext_convertUTF.lib;lib\MinSizeRel\ext_poly2tri.lib;lib\MinSizeRel\ext_md5.lib;J:\Dev\Projects\Trapcore\cocos2d\external\curl\prebuilt\win32\libcurl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\png\prebuilt\win32\libpng.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\MinSizeRel\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>J:/Dev/Projects/Trapcore/proj.win32/MinSizeRel/Trapcore.lib</ImportLibrary>
+      <ProgramDataBaseFile>J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/Trapcore.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/Box2D/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/chipmunk/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/freetype2/include/win32/freetype2" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/bullet/include/bullet" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/jpeg/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/openssl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/uv/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/webp/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/websockets/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/curl/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/png/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/glfw3/include/win32" /external:I "J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>J:\Dev\Projects\Trapcore\Classes;J:\Dev\Projects\Trapcore\cocos2d\cocos\audio\include;J:\Dev\Projects\Trapcore\cocos2d;J:\Dev\Projects\Trapcore\cocos2d\cocos;J:\Dev\Projects\Trapcore\cocos2d\extensions;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform;J:\Dev\Projects\Trapcore\cocos2d\cocos\editor-support;J:\Dev\Projects\Trapcore\cocos2d\cocos\base;J:\Dev\Projects\Trapcore\cocos2d\cocos\platform\win32;J:\Dev\Projects\Trapcore\cocos2d\external\recast\..;J:\Dev\Projects\Trapcore\cocos2d\external\tinyxml2\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxhash\.;J:\Dev\Projects\Trapcore\cocos2d\external\xxtea\.;J:\Dev\Projects\Trapcore\cocos2d\external\clipper\.;J:\Dev\Projects\Trapcore\cocos2d\external\edtaa3func\.;J:\Dev\Projects\Trapcore\cocos2d\external\ConvertUTF\.;J:\Dev\Projects\Trapcore\cocos2d\external\poly2tri\..;J:\Dev\Projects\Trapcore\cocos2d\external\md5\..;J:\Dev\Projects\Trapcore\cocos2d\external\unzip\.;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\include;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\include;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\include\win32\freetype2;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\include\bullet;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\uv\include;J:\Dev\Projects\Trapcore\cocos2d\external\webp\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\curl\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\png\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\include\OGLES;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\include;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\include;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\include\win32;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/uv/prebuilt/win32/uv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/websockets/prebuilt/win32/websockets.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/curl/prebuilt/win32/libcurl.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\RelWithDebInfo\cocos2d.lib;lib\RelWithDebInfo\external.lib;J:\Dev\Projects\Trapcore\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;J:\Dev\Projects\Trapcore\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;J:\Dev\Projects\Trapcore\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\RelWithDebInfo\ext_recast.lib;J:\Dev\Projects\Trapcore\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;J:\Dev\Projects\Trapcore\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\webp\prebuilt\win32\libwebp.lib;J:\Dev\Projects\Trapcore\cocos2d\external\websockets\prebuilt\win32\websockets.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libssl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;J:\Dev\Projects\Trapcore\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\RelWithDebInfo\ext_tinyxml2.lib;lib\RelWithDebInfo\ext_xxhash.lib;lib\RelWithDebInfo\ext_xxtea.lib;lib\RelWithDebInfo\ext_clipper.lib;lib\RelWithDebInfo\ext_edtaa3func.lib;lib\RelWithDebInfo\ext_convertUTF.lib;lib\RelWithDebInfo\ext_poly2tri.lib;lib\RelWithDebInfo\ext_md5.lib;J:\Dev\Projects\Trapcore\cocos2d\external\curl\prebuilt\win32\libcurl.lib;J:\Dev\Projects\Trapcore\cocos2d\external\png\prebuilt\win32\libpng.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;J:\Dev\Projects\Trapcore\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;J:\Dev\Projects\Trapcore\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;J:\Dev\Projects\Trapcore\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\RelWithDebInfo\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>J:/Dev/Projects/Trapcore/proj.win32/RelWithDebInfo/Trapcore.lib</ImportLibrary>
+      <ProgramDataBaseFile>J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/Trapcore.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule J:/Dev/Projects/Trapcore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SJ:/Dev/Projects/Trapcore -BJ:/Dev/Projects/Trapcore/proj.win32 --check-stamp-file J:/Dev/Projects/Trapcore/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildSet.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDefine.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDepend.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCXXCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeRCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule J:/Dev/Projects/Trapcore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SJ:/Dev/Projects/Trapcore -BJ:/Dev/Projects/Trapcore/proj.win32 --check-stamp-file J:/Dev/Projects/Trapcore/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildSet.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDefine.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDepend.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCXXCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeRCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule J:/Dev/Projects/Trapcore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SJ:/Dev/Projects/Trapcore -BJ:/Dev/Projects/Trapcore/proj.win32 --check-stamp-file J:/Dev/Projects/Trapcore/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildSet.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDefine.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDepend.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCXXCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeRCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule J:/Dev/Projects/Trapcore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SJ:/Dev/Projects/Trapcore -BJ:/Dev/Projects/Trapcore/proj.win32 --check-stamp-file J:/Dev/Projects/Trapcore/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosBuildSet.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDefine.cmake;J:\Dev\Projects\Trapcore\cocos2d\cmake\Modules\CocosConfigDepend.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeCXXCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeRCCompiler.cmake;J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NeiPanMain.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Start.cpp" />
+    <ClCompile Include="TinoTeslaMain.cpp" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Classes\AppDelegate.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Classes\HelloWorldScene.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\main.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\Classes\AppDelegate.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\main.cpp" />
+    <ClInclude Include="NeiPanMain.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Start.h" />
+    <ClInclude Include="TinoTeslaMain.h" />
+    <ResourceCompile Include="J:\Dev\Projects\Trapcore\proj.win32\game.rc" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\CloseNormal.png" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\CloseSelected.png" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\HelloWorld.png" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\fonts\arial.ttf" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\res\.gitkeep" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\ZERO_CHECK.vcxproj">
+      <Project>{86E19EBD-0481-3C7C-A10D-5D39BADC4CEF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\SYNC_RESOURCE-Trapcore.vcxproj">
+      <Project>{EFDA9691-D8FF-3F9C-888A-16282A2B53A7}</Project>
+      <Name>SYNC_RESOURCE-Trapcore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{341E54F6-CEE8-3E7A-A6F6-59AEA2BF83D5}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{17D95033-5401-30A6-A344-778077F5F564}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{05CC8B6E-05A7-3739-8B99-12149E473B5F}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{7048E26F-701C-3119-B9D9-D1C6AB07BA75}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\md5\ext_md5.vcxproj">
+      <Project>{FEAF942F-D31E-31E1-B31C-122B793ECA5C}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{CCC88FCA-B047-3840-8D38-2A8B4CB6CF9D}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\recast\ext_recast.vcxproj">
+      <Project>{8DB99456-91E4-3890-8CFC-0CA3ED62D88B}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{8049FADE-1C4B-3777-BE02-FD6383511120}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{ABF22ABD-DAEA-38DC-BE24-E0F403921AF1}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{B5ACBBD9-E350-3CEB-9632-F3FCAA621F10}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{4D237A41-445F-3F1B-B6F4-578CD148A356}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="J:\Dev\Projects\Trapcore\proj.win32\engine\external\external.vcxproj">
+      <Project>{69FEB398-9B57-355B-A017-653FDD0070BD}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

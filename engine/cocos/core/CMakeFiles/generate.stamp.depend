@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+J:/Dev/Projects/Trapcore/cocos2d/cocos/2d/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/3d/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/audio/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/base/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/editor-support/cocostudio/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/math/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/navmesh/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/network/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/physics/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/physics3d/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/platform/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/renderer/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/cocos/ui/CMakeLists.txt
+J:/Dev/Projects/Trapcore/cocos2d/extensions/CMakeLists.txt
