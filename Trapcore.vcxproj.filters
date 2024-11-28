@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="J:\Dev\Projects\Trapcore\Classes\AppDelegate.cpp">
-      <Filter>Source Files\Classes</Filter>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.cpp">
+      <Filter>Source Files\proj.win32\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="J:\Dev\Projects\Trapcore\Classes\HelloWorldScene.cpp">
-      <Filter>Source Files\Classes</Filter>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.cpp">
+      <Filter>Source Files\proj.win32\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Start.cpp">
+      <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
@@ -13,57 +16,25 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TinoTeslaMain.cpp">
-      <Filter>Classes\TinoTesla</Filter>
-    </ClCompile>
-    <ClCompile Include="NeiPanMain.cpp">
-      <Filter>Classes\NeiPan</Filter>
-    </ClCompile>
-    <ClCompile Include="Start.cpp" />
-    <ClCompile Include="Player.cpp">
-      <Filter>Classes\NeiPan</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Classes\AppDelegate.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h">
+      <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Classes\HelloWorldScene.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.h">
+      <Filter>Source Files\proj.win32\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.h">
+      <Filter>Source Files\proj.win32\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Start.h">
+      <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\main.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\CloseSelected.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\HelloWorld.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\fonts\Marker Felt.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\fonts\arial.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\res\.gitkeep">
-      <Filter>Resources\res</Filter>
-    </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\Resources\CloseNormal.png">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="TinoTeslaMain.h">
-      <Filter>Classes\TinoTesla</Filter>
-    </ClInclude>
-    <ClInclude Include="NeiPanMain.h">
-      <Filter>Classes\NeiPan</Filter>
-    </ClInclude>
-    <ClInclude Include="Start.h" />
-    <ClInclude Include="Player.h">
-      <Filter>Classes\NeiPan</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -75,44 +46,14 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{F4545930-CB1F-3283-981B-AF6269DB0748}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\fonts">
-      <UniqueIdentifier>{E8C80979-49C8-35E0-AC16-D226472F2F56}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{A45AEE82-3599-3D8D-9F94-B26DB3464C20}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes">
-      <UniqueIdentifier>{B6132C2D-BFD6-32E5-B0C5-CA6DAC49784F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{CD2FE542-D0C7-3587-B25F-DDAF536EBBE4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes">
-      <UniqueIdentifier>{9c6f9379-c9a9-47e7-9173-86e53603bd55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Levels">
-      <UniqueIdentifier>{12cc662c-40a1-46d4-991d-a593a168a06d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\NeiPan">
-      <UniqueIdentifier>{2883fd67-fe84-4e5c-8300-e21779ce8cb3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\TinoTesla">
-      <UniqueIdentifier>{e6035118-5279-4a25-9c6d-334e2a8e9373}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\images">
-      <UniqueIdentifier>{8cd00543-f090-4609-b500-6ff66812ffc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\sounds">
-      <UniqueIdentifier>{84099e96-22ef-488c-b25b-56c508620cad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\animations">
-      <UniqueIdentifier>{54857fe2-1d89-43fb-89d7-a2c790ce764f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\res">
-      <UniqueIdentifier>{9452E37B-B7E1-3FB9-8E85-67BEB5D2708E}</UniqueIdentifier>
+    <Filter Include="Source Files\proj.win32\Classes">
+      <UniqueIdentifier>{09996233-8494-3446-ACA8-64486FC2705A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
