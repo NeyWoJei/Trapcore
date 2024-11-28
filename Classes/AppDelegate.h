@@ -1,21 +1,19 @@
-﻿#ifndef  _APP_DELEGATE_H_
-#define  _APP_DELEGATE_H_
+﻿#ifndef __APP_DELEGATE_H__
+#define __APP_DELEGATE_H__
 
 #include "cocos2d.h"
 
 class AppDelegate : private cocos2d::Application
 {
 public:
-    AppDelegate();  // Конструктор
-    virtual ~AppDelegate();  // Деструктор
+    AppDelegate();
+    virtual ~AppDelegate();
 
-    virtual bool applicationDidFinishLaunching();  // Инициализация приложения
-    virtual void applicationDidEnterBackground();  // Приложение ушло в фон
-    virtual void applicationWillEnterForeground();  // Приложение вернулось в активное состояние
+    virtual void initGLContextAttrs();
 
-    void initGLContextAttrs();  // Настройка атрибутов OpenGL
+    virtual bool applicationDidFinishLaunching();
+    virtual void applicationDidEnterBackground();
+    virtual void applicationWillEnterForeground();
 };
 
-
-#endif // _APP_DELEGATE_H_
-
+#endif // __APP_DELEGATE_H__
