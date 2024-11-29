@@ -74,8 +74,19 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>		</Message>
+      <Message>				</Message>
       <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Bricks.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/CloseNormal.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
@@ -101,6 +112,17 @@ setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/HelloWorld.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Player.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,8 +142,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>		</Message>
+      <Message>				</Message>
       <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Bricks.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/CloseNormal.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
@@ -147,6 +180,17 @@ setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/HelloWorld.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Player.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -166,8 +210,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>		</Message>
+      <Message>				</Message>
       <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Bricks.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/CloseNormal.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
@@ -193,6 +248,17 @@ setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/HelloWorld.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Player.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -212,8 +278,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>		</Message>
+      <Message>				</Message>
       <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Bricks.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/CloseNormal.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
@@ -239,6 +316,17 @@ setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
 if %errorlevel% neq 0 goto :cmEnd
 C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/HelloWorld.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources/Player.png -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

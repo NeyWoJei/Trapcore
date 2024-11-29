@@ -2,18 +2,17 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "NeiPan/Player.h"  // Подключаем заголовок игрока
 
-class HelloWorld : public cocos2d::Scene
+class HelloWorld : public cocos2d::Layer  // Меняем на Layer, так как мы наследуемся от Layer, а не Scene
 {
 public:
-    static cocos2d::Scene* createScene();
-
+    static cocos2d::Scene* createScene();  // Указываем возвращаемый тип Scene*
     virtual bool init();
-    
-    // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
-    
-    // implement the "static create()" method manually
+
+private:
+    Player* _player;  // Указатель на игрока
     CREATE_FUNC(HelloWorld);
 };
 

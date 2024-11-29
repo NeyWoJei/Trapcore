@@ -94,15 +94,13 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <MinimalRebuild>
-      </MinimalRebuild>
+      <MinimalRebuild></MinimalRebuild>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SupportJustMyCode>
-      </SupportJustMyCode>
+      <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
@@ -122,8 +120,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Debug/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -265,15 +262,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <MinimalRebuild>
-      </MinimalRebuild>
+      <MinimalRebuild></MinimalRebuild>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SupportJustMyCode>
-      </SupportJustMyCode>
+      <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
@@ -295,8 +290,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/Release/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -438,15 +432,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <MinimalRebuild>
-      </MinimalRebuild>
+      <MinimalRebuild></MinimalRebuild>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SupportJustMyCode>
-      </SupportJustMyCode>
+      <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
@@ -468,8 +460,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/MinSizeRel/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -612,15 +603,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <MinimalRebuild>
-      </MinimalRebuild>
+      <MinimalRebuild></MinimalRebuild>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SupportJustMyCode>
-      </SupportJustMyCode>
+      <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
@@ -640,8 +629,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different J:/Dev/Projects/Trapcore/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/RelWithDebInfo/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -832,20 +820,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Classes\NeiPan\NeiPanMain.h" />
-    <ClInclude Include="Classes\NeiPan\Player.h" />
-    <ClInclude Include="Classes\TinoTesla\TinoTeslaMain.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Start.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\main.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h" />
-    <ClCompile Include="Classes\NeiPan\NeiPanMain.cpp" />
-    <ClCompile Include="Classes\NeiPan\Player.cpp" />
-    <ClCompile Include="Classes\TinoTesla\TinoTeslaMain.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Start.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\main.cpp" />
     <ResourceCompile Include="J:\Dev\Projects\Trapcore\proj.win32\game.rc" />
@@ -912,15 +898,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{69FEB398-9B57-355B-A017-653FDD0070BD}</Project>
       <Name>external</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Resources\CloseNormal.png" />
-    <Image Include="Resources\CloseSelected.png" />
-    <Image Include="Resources\HelloWorld.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="Resources\fonts\arial.ttf" />
-    <Font Include="Resources\fonts\Marker Felt.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

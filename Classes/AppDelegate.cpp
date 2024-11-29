@@ -1,19 +1,12 @@
 ﻿#include "AppDelegate.h"
 #include "HelloWorldScene.h"
 
-// #define USE_AUDIO_ENGINE 1
-
-#if USE_AUDIO_ENGINE
-#include "audio/include/AudioEngine.h"
-using namespace cocos2d::experimental;
-#endif
-
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
+static cocos2d::Size designResolutionSize = cocos2d::Size(1280, 720);  // Базовое разрешение для дизайна
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
+static cocos2d::Size largeResolutionSize = cocos2d::Size(1920, 1080);  // Разрешение для Full HD
 
 AppDelegate::AppDelegate()
 {
@@ -32,11 +25,6 @@ void AppDelegate::initGLContextAttrs()
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
-static int register_all_packages()
-{
-    return 0;
-}
-
 bool AppDelegate::applicationDidFinishLaunching()
 {
     auto director = Director::getInstance();
@@ -48,11 +36,16 @@ bool AppDelegate::applicationDidFinishLaunching()
         director->setOpenGLView(glview);
     }
 
-    director->setDisplayStats(true);
-    director->setAnimationInterval(1.0f / 60);
+    director->setDisplayStats(true);  // Показывать статистику
+    director->setAnimationInterval(1.0f / 60);  // Установить частоту кадров
 
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
+    // Получаем разрешение экрана
     auto frameSize = glview->getFrameSize();
+
+    // Устанавливаем разрешение дизайна
+    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
+
+    // Масштабируем контент в зависимости от разрешения
     if (frameSize.height > mediumResolutionSize.height)
     {
         director->setContentScaleFactor(MIN(largeResolutionSize.height / designResolutionSize.height, largeResolutionSize.width / designResolutionSize.width));
@@ -66,7 +59,14 @@ bool AppDelegate::applicationDidFinishLaunching()
         director->setContentScaleFactor(MIN(smallResolutionSize.height / designResolutionSize.height, smallResolutionSize.width / designResolutionSize.width));
     }
 
-    register_all_packages();
+    // Принудительное включение полноэкранного режима
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+    HWND hwnd = (HWND)glview->getWin32Window();
+    LONG style = GetWindowLong(hwnd, GWL_STYLE);
+    style &= ~WS_OVERLAPPEDWINDOW; // Убираем рамки окна
+    SetWindowLong(hwnd, GWL_STYLE, style);
+    SetWindowPos(hwnd, HWND_TOP, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_FRAMECHANGED);
+#endif
 
     auto scene = HelloWorld::createScene();
     director->runWithScene(scene);
