@@ -6,7 +6,7 @@ USING_NS_CC;
 
 Scene* HelloWorld::createScene()
 {
-    // Создаем сцену с физикой
+    // Создаем сцену с физическим миром
     auto scene = Scene::createWithPhysics();  // Создаем сцену с физическим миром
     auto layer = HelloWorld::create();  // Создаем слой
     scene->addChild(layer);  // Добавляем слой в сцену
@@ -19,14 +19,6 @@ bool HelloWorld::init()
     if (!Layer::init())
     {
         return false;
-    }
-
-    // Получаем родительский объект сцены, чтобы получить доступ к физическому миру
-    auto scene = dynamic_cast<Scene*>(this->getParent());  // Получаем родительскую сцену
-    if (scene)
-    {
-        auto physicsWorld = scene->getPhysicsWorld();  // Получаем физический мир сцены
-        physicsWorld->setGravity(Vec2(0, -1000));  // Устанавливаем гравитацию по оси Y
     }
 
     // Получаем размеры экрана
@@ -61,21 +53,34 @@ bool HelloWorld::init()
     playerBody->setDynamic(true);  // Игрок будет динамичным
     playerBody->setGravityEnable(true);  // Включаем гравитацию для игрока
     _player->setPhysicsBody(playerBody);  // Привязываем тело к игроку
+    playerBody->setMass(1022);
 
     this->addChild(_player);
 
     // Создаем землю (кирпичи)
-    auto ground = Sprite::create("Bricks.png");  // Убедитесь, что файл существует
-    ground->setPosition(Vec2(visibleSize.width / 2, 50));  // Позиционируем землю внизу экрана
+    auto ground = Sprite::create("Bricks.png");
+    ground->setPosition(Vec2(visibleSize.width / 2, 50));
 
     // Создаем физическое тело для земли
     auto groundBody = PhysicsBody::createBox(ground->getContentSize());
-    groundBody->setDynamic(false);  // Земля не двигается
-    ground->setPhysicsBody(groundBody);  // Привязываем физическое тело к земле
+    groundBody->setDynamic(false);
+    ground->setPhysicsBody(groundBody);
 
     this->addChild(ground);
 
     return true;
+}
+
+void HelloWorld::onEnter()
+{
+    Layer::onEnter();  // Вызов родительского onEnter()
+
+    // Получаем физический мир сцены и устанавливаем гравитацию
+    auto physicsWorld = this->getScene()->getPhysicsWorld();  // Получаем физический мир сцены
+    if (physicsWorld)
+    {
+        physicsWorld->setGravity(Vec2(0, -1000));  // Установите сильную гравитацию
+    }
 }
 
 void HelloWorld::menuCloseCallback(cocos2d::Ref* pSender)

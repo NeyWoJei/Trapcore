@@ -10,6 +10,7 @@ public:
     static cocos2d::Scene* createScene();  // Указываем возвращаемый тип Scene*
     virtual bool init();
     void menuCloseCallback(cocos2d::Ref* pSender);
+    virtual void onEnter() override;
 
 private:
     Player* _player;  // Указатель на игрока
