@@ -1,9 +1,11 @@
 ﻿#include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "TinoTesla/TinoTeslaMain.h"
+
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1280, 720);  // Базовое разрешение для дизайна
+static cocos2d::Size designResolutionSize = cocos2d::Size(1280, 1024);  // Базовое разрешение для дизайна
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(1920, 1080);  // Разрешение для Full HD
@@ -43,7 +45,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto frameSize = glview->getFrameSize();
 
     // Устанавливаем разрешение дизайна
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
+    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
 
     // Масштабируем контент в зависимости от разрешения
     if (frameSize.height > mediumResolutionSize.height)
@@ -68,7 +70,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     SetWindowPos(hwnd, HWND_TOP, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_FRAMECHANGED);
 #endif
 
-    auto scene = HelloWorld::createScene();
+    auto scene = TinoTeslaMain::createScene();
     director->runWithScene(scene);
 
     return true;

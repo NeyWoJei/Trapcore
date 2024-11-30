@@ -13,8 +13,8 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.cpp">
       <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
     </ClCompile>
-    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Start.cpp">
-      <Filter>Source Files\proj.win32</Filter>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.cpp">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
     </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
@@ -22,12 +22,18 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\Scenas\SceneSettings.cpp">
+      <Filter>Source Files\proj.win32\Classes\Scenas</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.h">
+      <Filter>Source Files\proj.win32\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Config.h">
       <Filter>Source Files\proj.win32\Classes</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.h">
@@ -39,14 +45,17 @@
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.h">
       <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
     </ClInclude>
-    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Start.h">
-      <Filter>Source Files\proj.win32</Filter>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.h">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\main.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenas\SceneSettings.h">
+      <Filter>Source Files\proj.win32\Classes\Scenas</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +78,12 @@
     </Filter>
     <Filter Include="Source Files\proj.win32\Classes\NeiPan">
       <UniqueIdentifier>{6E228C5D-14E1-3A6E-B7B3-C0DF3891F2C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\TinoTesla">
+      <UniqueIdentifier>{78C73EFB-9533-32AE-9F67-5284C90B2B5B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\Scenas">
+      <UniqueIdentifier>{c6415490-888e-4c65-b1c0-c50e5376965e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
