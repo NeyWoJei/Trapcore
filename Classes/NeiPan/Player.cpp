@@ -25,7 +25,7 @@ bool Player::init()
     auto texture = Director::getInstance()->getTextureCache()->addImage("Player.png");
 
     // Указываем начальный кадр: прямоугольник, например, 32x64 пикселей
-    Rect initialFrame(0, 0, 61, 128);
+    Rect initialFrame(0, 0, 60, 128);
 
     if (!Sprite::initWithTexture(texture, initialFrame)) {
         return false;
@@ -33,7 +33,7 @@ bool Player::init()
 
     // Создание физического тела
     PhysicsMaterial material(0.1f, 0.0f, 0.5f);
-    Size colliderSize(61, 128);
+    Size colliderSize(60, 128);
     auto physicsBody = PhysicsBody::createBox(colliderSize, material);
     physicsBody->setRotationEnable(false);
     physicsBody->setMoment(PHYSICS_INFINITY);
@@ -128,7 +128,7 @@ void Player::update(float delta)
         // Возвращаемся к первому кадру при приземлении
         auto texture = Director::getInstance()->getTextureCache()->addImage(PlayerTexture);
         if (texture) {
-            Rect idleFrameRect(0, 0, 59, 128);  // Первый кадр
+            Rect idleFrameRect(0, 0, 60, 128);  // Первый кадр
             auto idleFrame = SpriteFrame::createWithTexture(texture, idleFrameRect);
             if (idleFrame) {
                 this->setSpriteFrame(idleFrame);  // Устанавливаем кадр для стояния

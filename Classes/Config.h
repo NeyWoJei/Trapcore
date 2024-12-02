@@ -24,8 +24,8 @@ namespace Config {
     namespace Player {
 
         const std::string PlayerTexture = "Player.png";
-        const float PlayerScale = 0.4f;
-        const float PlayerImpulse = 85000.0f;
+        const float PlayerScale = 0.25f;
+        const float PlayerImpulse = 22000.0f;
         const float MaxFallSpeed = -1000.0f;
         const float PlayerMoveSpeed = 200.0f;
 
