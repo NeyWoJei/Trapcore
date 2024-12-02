@@ -217,3 +217,4 @@ void Player::playerAnimation()
     // Запускаем анимацию
     this->runAction(repeat);
 }
+
