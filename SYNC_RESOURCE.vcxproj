@@ -22,11 +22,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EFDA9691-D8FF-3F9C-888A-16282A2B53A7}</ProjectGuid>
+    <ProjectGuid>{F2E4B2F2-B64E-364A-8378-CE36CFBEE4B9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>Win32</Platform>
-    <ProjectName>SYNC_RESOURCE-Trapcore</ProjectName>
+    <ProjectName>SYNC_RESOURCE</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -73,20 +73,6 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
-if %errorlevel% neq 0 goto :cmEnd
-C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -97,20 +83,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
-if %errorlevel% neq 0 goto :cmEnd
-C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
@@ -121,20 +93,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
-if %errorlevel% neq 0 goto :cmEnd
-C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
@@ -145,26 +103,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "    copying to J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources"
-if %errorlevel% neq 0 goto :cmEnd
-C:\msys64\mingw64\bin\python.exe J:/Dev/Projects/Trapcore/cocos2d/cmake/scripts/sync_folder.py -s J:/Dev/Projects/Trapcore/proj.win32/Resources -d J:/Dev/Projects/Trapcore/proj.win32/bin/Trapcore/$(Configuration)/Resources
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\fb0066f238f4f052a0b59d87c50b021c\SYNC_RESOURCE-Trapcore.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\e68b505d340e195bf045b7beb3f713aa\Resources.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying resources</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying resources for Trapcore ..."
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory J:/Dev/Projects/Trapcore/proj.win32/Resources J:/Dev/Projects/Trapcore/proj.win32/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -172,50 +116,98 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE-Trapcore</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources\Bricks.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseNormal.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseSelected.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\HelloWorld.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Player.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\buttonMenu.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Marker Felt.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalRegula.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\arial.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying resources</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory J:/Dev/Projects/Trapcore/proj.win32/Resources J:/Dev/Projects/Trapcore/proj.win32/resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources\Bricks.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseNormal.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseSelected.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\HelloWorld.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Player.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\buttonMenu.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Marker Felt.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalRegula.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\arial.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Copying resources</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory J:/Dev/Projects/Trapcore/proj.win32/Resources J:/Dev/Projects/Trapcore/proj.win32/resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources\Bricks.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseNormal.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseSelected.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\HelloWorld.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Player.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\buttonMenu.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Marker Felt.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalRegula.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\arial.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Copying resources</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory J:/Dev/Projects/Trapcore/proj.win32/Resources J:/Dev/Projects/Trapcore/proj.win32/resources
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources\Bricks.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseNormal.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\CloseSelected.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\HelloWorld.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Player.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\buttonMenu.png;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Marker Felt.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\Unformital.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalBlack.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\UnformitalRegula.ttf;J:\Dev\Projects\Trapcore\proj.win32\Resources\fonts\arial.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\fb0066f238f4f052a0b59d87c50b021c\SYNC_RESOURCE.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying resources for Trapcore ..."
-if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE-Trapcore</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying resources for Trapcore ..."
-if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE-Trapcore</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E echo "Copying resources for Trapcore ..."
-if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE-Trapcore</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\Resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
@@ -278,7 +270,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE-Trapcore">
+    <None Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE">
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -31,7 +31,7 @@ bool SceneSettings::init() {
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     //добавление текста спец шрифта
-    auto ExitToMenu = ui::Button::create("buttonMenu.png");
+    auto ExitToMenu = ui::Button::create(ButtonTexture);
 
     if (ExitToMenu == nullptr ||
         ExitToMenu->getContentSize().width <= 0 ||
@@ -62,5 +62,59 @@ bool SceneSettings::init() {
         this->addChild(ExitToMenu, 1);
     }
 
+    auto SetVolume = Label::createWithTTF("VOLUME", FontPath, 24);
+    if (SetVolume) {
+        // Установка позиции текста в центре экрана
+        SetVolume->setPosition(Vec2(origin.x + visibleSize.width * 0.4,
+            origin.y + visibleSize.height * 0.3));
+
+        // Добавление текста на сцену
+        this->addChild(SetVolume, 1);
+    }
+
+    auto PercentLabel = Label::createWithTTF("50", FontPath, 16);
+    if (PercentLabel) {
+        // Установка позиции текста в центре экрана
+        PercentLabel->setPosition(Vec2(origin.x + visibleSize.width / 2,
+            origin.y + visibleSize.height * 0.34));
+
+        // Добавление текста на сцену
+        this->addChild(PercentLabel, 1);
+    }
+
+    auto background2 = Sprite::create(wallpaperCastle);
+
+    if (background2 == nullptr) {
+        CCLOG("Error: Unable to load background.png");
+        return false;
+    }
+
+    background2->setPosition(Vec2(origin.x + visibleSize.width / 2,
+        origin.y + visibleSize.height / 2));
+    background2->setContentSize(visibleSize);
+    this->addChild(background2, 0);
+
+    auto slider = ui::Slider::create();
+
+        // Устанавливаем изображения для ползунка
+    slider->loadBarTexture(sliderTrack);          // Полоса
+    slider->loadSlidBallTextures(sliderThumb);    // Ползунок
+    slider->loadProgressBarTexture(sliderProgress); // Прогресс
+
+        // Позиция и размер
+    slider->setPosition(Vec2(visibleSize.width / 2, origin.y + visibleSize.height * 0.3));
+    slider->setPercent(1); 
+
+    slider->addEventListener([=](Ref* sender, ui::Slider::EventType type) {
+        if (type == ui::Slider::EventType::ON_PERCENTAGE_CHANGED) {
+            // Обновляем текст метки с текущим значением процента
+            int percent = slider->getPercent();
+            PercentLabel->setString(std::to_string(percent));
+        }
+        });
+
+        // Добавляем ползунок на слой
+    this->addChild(slider);
+    
     return true;
 }

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\e68b505d340e195bf045b7beb3f713aa\Resources.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\fb0066f238f4f052a0b59d87c50b021c\SYNC_RESOURCE.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\SYNC_RESOURCE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A4A9DE27-56A5-3249-A4F3-88CD8318A459}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

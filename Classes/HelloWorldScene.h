@@ -10,7 +10,6 @@ class HelloWorld : public cocos2d::Layer
 public:
     // Создание сцены
     static cocos2d::Scene* createScene();
-
     // Инициализация
     virtual bool init();
 
@@ -22,10 +21,15 @@ public:
 
     // Методы для создания элементов сцены
     void player();
-    void bricks();
+    void level1();
     void sizeRes();
 
+    void update(float deltaTime);  // Объявление метода обновления
+
+    void displayPlayerCoordinates();
+
 private:
+    cocos2d::Label* _coordinatesLabel = nullptr;
     Player* _player = nullptr;  // Указатель на игрока, инициализируем как nullptr для безопасности
 
     // Макрос для создания объекта класса

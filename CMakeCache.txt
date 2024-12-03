@@ -263,6 +263,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Path to a program.
 COCOS_COMMAND:FILEPATH=J:/Dev/cocos2d-x-4.0/tools/cocos2d-console/bin/cocos
 
+//The directory containing a CMake configuration file for Cocos2d.
+Cocos2d_DIR:PATH=Cocos2d_DIR-NOTFOUND
+
 //Path to a program.
 LUAJIT32_COMMAND:FILEPATH=J:/Dev/cocos2d-x-4.0/tools/cocos2d-console/plugins/plugin_luacompile/bin/32bit/luajit-win32.exe
 
@@ -286,6 +289,9 @@ OggDecoder_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 OggDecoder_SOURCE_DIR:STATIC=J:/Dev/Projects/Trapcore/cocos2d/external/win32-specific/OggDecoder
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
 
 //Value Computed by CMake
 OpenalSoft_BINARY_DIR:STATIC=J:/Dev/Projects/Trapcore/proj.win32/engine/external/win32-specific/OpenalSoft

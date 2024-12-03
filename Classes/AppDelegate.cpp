@@ -2,7 +2,6 @@
 #include "HelloWorldScene.h"
 #include "TinoTesla/TinoTeslaMain.h"
 
-
 USING_NS_CC;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(1280, 1024);  // Базовое разрешение для дизайна
@@ -70,8 +69,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     SetWindowPos(hwnd, HWND_TOP, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_FRAMECHANGED);
 #endif
 
-    auto scene = TinoTeslaMain::createScene();
-    director->runWithScene(scene);
+    auto mainMenuScene = TinoTeslaMain::createScene();
+    director->runWithScene(mainMenuScene);
 
     return true;
 }

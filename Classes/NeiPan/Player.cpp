@@ -22,7 +22,7 @@ bool Player::init()
 {
 
     // Предположим, что начальный кадр (0 кадр) находится в верхнем левом углу
-    auto texture = Director::getInstance()->getTextureCache()->addImage("Player.png");
+    auto texture = Director::getInstance()->getTextureCache()->addImage(PlayerTexture);
 
     // Указываем начальный кадр: прямоугольник, например, 32x64 пикселей
     Rect initialFrame(0, 0, 60, 128);
