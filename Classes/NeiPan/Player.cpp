@@ -1,53 +1,27 @@
 ﻿#include "Player.h"
 #include "cocos2d.h"
 #include "Config.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 using namespace Config::Player;
 
 // Функция для создания персонажа
-Player* Player::create()
+Player* Player::create(HelloWorld* layer)
 {
     Player* player = new Player();
     if (player && player->init()) {
-        player->autorelease();  // Автоматическое управление памятью
+        player->_layer = layer;  // Устанавливаем слой
+        player->autorelease();
         return player;
     }
     CC_SAFE_DELETE(player);
     return nullptr;
 }
 
-// Инициализация персонажа
 bool Player::init()
 {
-
-    // Предположим, что начальный кадр (0 кадр) находится в верхнем левом углу
-    auto texture = Director::getInstance()->getTextureCache()->addImage(PlayerTexture);
-
-    // Указываем начальный кадр: прямоугольник, например, 32x64 пикселей
-    Rect initialFrame(0, 0, 60, 128);
-
-    if (!Sprite::initWithTexture(texture, initialFrame)) {
-        return false;
-    }
-
-    // Создание физического тела
-    PhysicsMaterial material(0.1f, 0.0f, 0.5f);
-    Size colliderSize(60, 128);
-    auto physicsBody = PhysicsBody::createBox(colliderSize, material);
-    physicsBody->setRotationEnable(false);
-    physicsBody->setMoment(PHYSICS_INFINITY);
-    physicsBody->setMass(1);
-
-    this->setScale(PlayerScale);
-    this->setPhysicsBody(physicsBody);
-
-    // Подключение событий клавиатуры
-    auto listener = EventListenerKeyboard::create();
-    listener->onKeyPressed = CC_CALLBACK_2(Player::onKeyPressed, this);
-    listener->onKeyReleased = CC_CALLBACK_2(Player::onKeyReleased, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-
+    CreatePlayer();
     // Обновление состояния игрока
     this->scheduleUpdate();
 
@@ -55,6 +29,49 @@ bool Player::init()
 }
 
 
+// Создание текстуры персонажа и настройка физики
+bool Player::CreatePlayer() {
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    // Загружаем текстуру игрока
+    auto texture = Director::getInstance()->getTextureCache()->addImage(PlayerTexture);
+    if (!texture) {
+        return false;  // Если текстура не найдена, выходим
+    }
+
+    // Указываем начальный кадр для спрайта
+    Rect initialFrame(0, 0, 60, 128);
+    if (!Sprite::initWithTexture(texture, initialFrame)) {
+        return false;  // Если не удалось создать спрайт, выходим
+    }
+
+    // Создаем физическое тело
+    PhysicsMaterial material(0.1f, 0.0f, 0.5f);
+    Size colliderSize(60, 128);
+    auto physicsBody = PhysicsBody::createBox(colliderSize, material);
+    physicsBody->setRotationEnable(false);
+    physicsBody->setMoment(PHYSICS_INFINITY);
+    physicsBody->setMass(1);
+    physicsBody->setDynamic(true);
+    physicsBody->setGravityEnable(true);
+    physicsBody->setCollisionBitmask(0x01); 
+    physicsBody->setContactTestBitmask(0x02);  
+
+    this->setScale(0.3);
+
+    // Позиционируем игрока на экране (над землей)
+    this->setPosition(Vec2(visibleSize.width / 2, 700)); // Позиция на экране
+
+    // Привязываем физическое тело к спрайту
+    this->setPhysicsBody(physicsBody);
+
+    // Подключаем события клавиатуры
+    auto listener = EventListenerKeyboard::create();
+    listener->onKeyPressed = CC_CALLBACK_2(Player::onKeyPressed, this);
+    listener->onKeyReleased = CC_CALLBACK_2(Player::onKeyReleased, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+
+}
 
 // Обработка нажатия клавиш
 void Player::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
@@ -77,7 +94,6 @@ void Player::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     }
 }
 
-
 // Обработка отпускания клавиш
 void Player::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 {
@@ -97,6 +113,8 @@ void Player::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 // Обновление состояния игрока
 void Player::update(float delta)
 {
+    displayPlayerCoordinates(); // Метод показа координат
+
     this->setRotation(0);  // Убираем возможный поворот
 
     auto physicsBody = getPhysicsBody();
@@ -121,7 +139,7 @@ void Player::update(float delta)
     }
 
     // Проверка приземления
-    if (physicsBody->getVelocity().y == 0 && isJumping) {
+    if (isJumping && physicsBody->getVelocity().y == 0) {
         isJumping = false;
         canDoubleJump = true;
 
@@ -137,13 +155,11 @@ void Player::update(float delta)
     }
 }
 
-
-
-
 // Прыжок
 void Player::jump()
 {
     auto physicsBody = this->getPhysicsBody();
+    float fallSpeed = physicsBody->getVelocity().y;
 
     // Если персонаж не прыгает (на земле) — выполняем обычный прыжок
     if (!isJumping) {
@@ -172,9 +188,12 @@ void Player::jump()
             physicsBody->applyImpulse(Vec2(0, PlayerImpulse));  // Применяем импульс для второго прыжка
         }
     }
+    else if (fallSpeed <= 0.1) {
+        isJumping = false;
+    }
 }
 
-
+// Анимация персонажа
 void Player::playerAnimation()
 {
     // Останавливаем текущую анимацию, если она существует
@@ -193,7 +212,7 @@ void Player::playerAnimation()
     Vector<SpriteFrame*> frames;
 
     // Размеры кадров
-    const int frameWidth = 61;
+    const int frameWidth = 60;
     const int frameHeight = 128;
 
     // Анимация бега (первые 4 кадра)
@@ -218,3 +237,39 @@ void Player::playerAnimation()
     this->runAction(repeat);
 }
 
+// Метод для отображения координат игрока
+void Player::displayPlayerCoordinates()
+{
+    auto physicsBody = getPhysicsBody();
+    Vec2 playerPos = this->getPosition();
+    float fallSpeed = physicsBody->getVelocity().y;
+
+    // Создаем строку с координатами игрока
+    std::string coordinates = "Player X: " + std::to_string(playerPos.x) + " Y: " + std::to_string(playerPos.y);
+    std::string velocity = "Player velocity: " + std::to_string(fallSpeed);
+
+    // Создаем текстовый объект для отображения координат
+    if (!_coordinatesLabel) {
+        // Если метки еще не созданы, создаем их
+        _coordinatesLabel = Label::createWithTTF(coordinates, Config::General::FontPath, 12);
+        _velocityLabel = Label::createWithTTF(velocity, Config::General::FontPath, 12);
+
+        // Устанавливаем позиции меток
+        _coordinatesLabel->setPosition(Vec2(200, Director::getInstance()->getVisibleSize().height - 30)); // координаты
+        _velocityLabel->setPosition(Vec2(160, Director::getInstance()->getVisibleSize().height - 45)); // скорость
+
+        // Добавляем метки на слой
+        if (_layer) {
+            _layer->addChild(_coordinatesLabel, 1);
+            _layer->addChild(_velocityLabel, 1);
+        }
+        else {
+            CCLOG("Ошибка: Слой не был передан в Player!");
+        }
+    }
+    else {
+        // Если метки уже существуют, обновляем их строки
+        _coordinatesLabel->setString(coordinates);
+        _velocityLabel->setString(velocity);
+    }
+}

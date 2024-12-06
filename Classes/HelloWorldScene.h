@@ -3,34 +3,27 @@
 
 #include "cocos2d.h"
 #include "NeiPan/Player.h"  // Подключаем заголовок игрока
+#include "physics/CCPhysicsContact.h"
 
 // Класс HelloWorld, наследуемый от cocos2d::Layer
 class HelloWorld : public cocos2d::Layer
 {
 public:
+
     // Создание сцены
     static cocos2d::Scene* createScene();
+
     // Инициализация
     virtual bool init();
 
     // Обработчик для кнопки закрытия
     void menuCloseCallback(cocos2d::Ref* pSender);
 
-    // Вход на сцену
-    virtual void onEnter() override;
-
     // Методы для создания элементов сцены
-    void player();
-    void level1();
+    bool level1();
     void sizeRes();
 
-    void update(float deltaTime);  // Объявление метода обновления
-
-    void displayPlayerCoordinates();
-
 private:
-    cocos2d::Label* _coordinatesLabel = nullptr;
-    Player* _player = nullptr;  // Указатель на игрока, инициализируем как nullptr для безопасности
 
     // Макрос для создания объекта класса
     CREATE_FUNC(HelloWorld);

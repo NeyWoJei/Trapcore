@@ -2,6 +2,7 @@
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
 #include "Config.h"
+#include "NeiPan/Player.h"
 
 USING_NS_CC;
 
@@ -23,61 +24,66 @@ bool HelloWorld::init()
         return false;
     }
 
-    level1(); // Добавляем уровень (карта из .tmx)
-    player(); // Добавляем игрока
+    level1(); // Загрузка уровня (карты)
     sizeRes(); // Добавляем дополнительные элементы
 
-    // Запускаем метод update каждую секунду
-    schedule([this](float deltaTime) {
-        update(deltaTime); // Обновляем координаты в каждом кадре
-        }, "update_coordinates_key");
+
+    auto player = Player::create(this);  // Создаём персонажа
+    if (!player) {
+        return false;  // Если не удалось создать игрока
+    }
+
+    this->addChild(player);  // Добавляем персонажа в слой
 
     return true;
 }
 
-void HelloWorld::update(float deltaTime)
-{
-    // Обновляем координаты игрока в каждом кадре
-    displayPlayerCoordinates();
-}
-
-
-void HelloWorld::level1()
-{
- // Скоро
-}
-
-
-
-void HelloWorld::player()
-{
+// В классе HelloWorld
+bool HelloWorld::level1() {
+    // Получаем размеры экрана
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-    // Создание игрока
-    _player = Player::create();
-    if (!_player) {
-        CCLOG("Ошибка: не удалось создать игрока!");
-        return;
+    // Загружаем текстуру земли
+    auto ground = Sprite::create("Level1.png");
+
+    // Проверка на ошибку загрузки текстуры
+    if (!ground) {
+        CCLOG("Ошибка загрузки текстуры земли");
+        return false;
     }
 
-    // Позиционируем игрока над землей
-    _player->setPosition(Vec2(visibleSize.width / 2, 700)); // 50 - это высота земли
+    // Устанавливаем физическое тело для земли
+    PhysicsMaterial material(0.0f, 0.0f, 0.0f);  // Материал без трения, упругости и плотности
+    Size colliderSize(1920, 64);  // Размеры коллайдера земли
+    auto physicsBody = PhysicsBody::createBox(colliderSize, material);  // Создаём прямоугольное физическое тело для земли
 
-    // Создание физического тела для игрока
-    auto playerBody = PhysicsBody::createBox(_player->getContentSize(), PhysicsMaterial(0.0f, 1.0f, 0.0f)); // Без трения, плотность 1
-    playerBody->setDynamic(true);  // Игрок движется, то есть динамичный объект
-    playerBody->setGravityEnable(true); // Включаем гравитацию
+    // Проверяем, что физическое тело создано
+    if (!physicsBody) {
+        CCLOG("Ошибка создания физического тела для земли");
+        return false;
+    }
 
-    // Устанавливаем категории и маски для коллизий
-    playerBody->setCategoryBitmask(0x01);  // Игрок
-    playerBody->setCollisionBitmask(0x02); // Сталкивается с объектами "0x02"
-    playerBody->setContactTestBitmask(0x02); // Проверка контакта с объектами "0x02"
+    physicsBody->setDynamic(false);  // Земля не будет двигаться, это статический объект
+    physicsBody->setGravityEnable(false);  // Отключаем влияние гравитации на землю
 
-    _player->setPhysicsBody(playerBody); // Привязываем физическое тело к игроку
+    // Устанавливаем позицию земли на экране
+    ground->setPosition(Vec2(visibleSize.width / 2, 180));  // Земля по центру экрана по ширине
 
-    this->addChild(_player);
+    // Устанавливаем физическое тело земли
+    ground->setPhysicsBody(physicsBody);
+    this->addChild(ground);
+
+
+    return true;  // Успешно завершено
 }
 
+
+
+
+
+
+
+// Метод для настройки дополнительных элементов на экране
 void HelloWorld::sizeRes()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -101,33 +107,9 @@ void HelloWorld::sizeRes()
     this->addChild(menu);
 }
 
-void HelloWorld::onEnter()
-{
-    Layer::onEnter(); // Вызов родительской реализации
-}
-
+// Метод для закрытия приложения
 void HelloWorld::menuCloseCallback(cocos2d::Ref* pSender)
 {
     Director::getInstance()->end();
 }
 
-void HelloWorld::displayPlayerCoordinates()
-{
-    // Получаем текущую позицию игрока
-    Vec2 playerPos = _player->getPosition();
-
-    // Создаем строку с координатами игрока
-    std::string coordinates = "Player X: " + std::to_string(playerPos.x) + " Y: " + std::to_string(playerPos.y);
-
-    // Создаем текстовый объект для отображения координат
-    if (!_coordinatesLabel) {
-        // Если метка еще не создана, создаем её
-        _coordinatesLabel = Label::createWithTTF(coordinates, Config::General::FontPath, 12);
-        _coordinatesLabel->setPosition(Vec2(200, Director::getInstance()->getVisibleSize().height - 30)); // Размещаем в верхнем левом углу
-        this->addChild(_coordinatesLabel, 1);  // Добавляем метку на слой
-    }
-    else {
-        // Если метка уже существует, обновляем текст
-        _coordinatesLabel->setString(coordinates);
-    }
-}

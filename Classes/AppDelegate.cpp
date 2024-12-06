@@ -69,8 +69,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     SetWindowPos(hwnd, HWND_TOP, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_FRAMECHANGED);
 #endif
 
-    auto mainMenuScene = TinoTeslaMain::createScene();
-    director->runWithScene(mainMenuScene);
+    auto helloWorldScene = TinoTeslaMain::createScene();
+    director->runWithScene(helloWorldScene);
+
 
     return true;
 }

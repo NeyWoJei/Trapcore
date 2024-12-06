@@ -2,13 +2,19 @@
 #define __PLAYER_H__
 
 #include "cocos2d.h"
+#include "HelloWorldScene.h"
+
+class HelloWorld;
 
 class Player : public cocos2d::Sprite
 {
 public:
     // Создание и инициализация игрока
-    static Player* create();
+    static Player* create(HelloWorld* layer);
     bool init() override;
+
+    // Инициализация координат
+    void displayPlayerCoordinates();
 
     // Обработка клавиш
     void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
@@ -16,16 +22,24 @@ public:
 
     // Обновление состояния игрока
     void update(float delta) override;
+    bool CreatePlayer();
 
     // Прыжок
     void jump();
 
 
-    // Анимация ходьбы
+
+
+    // Анимация ходьбы и ее инициализация
     void playerAnimation();
 
 private:
-    cocos2d::Sprite* _playerSprite;
+    HelloWorld* _layer = nullptr;
+    Player* _player = nullptr; 
+
+    Sprite* _playerSprite;
+    cocos2d::Label* _coordinatesLabel = nullptr; // координаты игрока
+    cocos2d::Label* _velocityLabel = nullptr; // скорость падения игрока
 
     bool isJumping = false;       // Персонаж в прыжке
     bool canDoubleJump = false;   // Разрешен второй прыжок

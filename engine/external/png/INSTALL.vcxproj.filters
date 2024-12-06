@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\cfb9b3de52feab423512f87c6012c83d\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A4A9DE27-56A5-3249-A4F3-88CD8318A459}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
