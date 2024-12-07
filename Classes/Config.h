@@ -33,11 +33,10 @@ namespace Config {
     // Настройки игрока
     namespace Player {
 
-        const std::string PlayerTexture = "Player.png";
+        const std::string PlayerTexture = "Amogus.png";
         const float PlayerScale = 0.25f;
-        const float PlayerImpulse = 500.0f;
         const float MaxFallSpeed = -1000.0f;
-        const float PlayerMoveSpeed = 200.0f;
+        const float PlayerMoveSpeed = 400.0f;
 
     }
 }

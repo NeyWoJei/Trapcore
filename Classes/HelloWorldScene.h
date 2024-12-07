@@ -24,7 +24,6 @@ public:
     void sizeRes();
 
 private:
-
     // Макрос для создания объекта класса
     CREATE_FUNC(HelloWorld);
 };

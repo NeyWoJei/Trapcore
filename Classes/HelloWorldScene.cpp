@@ -3,6 +3,7 @@
 #include "ui/CocosGUI.h"
 #include "Config.h"
 #include "NeiPan/Player.h"
+#include "NeiPan/Camera.h"
 
 USING_NS_CC;
 
@@ -18,22 +19,41 @@ Scene* HelloWorld::createScene()
     return scene; // Возвращаем полную сцену
 }
 
-bool HelloWorld::init()
-{
+bool HelloWorld::init() {
     if (!Layer::init()) {
         return false;
     }
 
-    level1(); // Загрузка уровня (карты)
-    sizeRes(); // Добавляем дополнительные элементы
-
-
-    auto player = Player::create(this);  // Создаём персонажа
+    // Создаем игрока
+    auto player = Player::create(this);
     if (!player) {
-        return false;  // Если не удалось создать игрока
+        return false;
     }
 
-    this->addChild(player);  // Добавляем персонажа в слой
+    // Создаем камеру
+    auto camera = CameraMain::create();  // Теперь создаем объект CameraMain
+    if (!camera) {
+        return false;
+    }
+
+    this->addChild(camera);  // Добавляем камеру на сцену
+    this->addChild(player);   // Добавляем персонажа в слой
+
+    // Загружаем уровень
+    level1();
+    sizeRes();
+
+    // Скрываем стандартную камеру
+    auto defaultCamera = Camera::getDefaultCamera();
+    if (defaultCamera) {
+        CCLOG("Hiding the default camera");
+
+        // Убираем стандартную камеру из рендеринга
+        defaultCamera->setCameraFlag(CameraFlag::USER3);  // Убираем её из рендеринга
+    }
+
+    // Устанавливаем игрока в камеру
+    camera->setPlayer(player);
 
     return true;
 }
@@ -53,7 +73,7 @@ bool HelloWorld::level1() {
     }
 
     // Устанавливаем физическое тело для земли
-    PhysicsMaterial material(0.0f, 0.0f, 0.0f);  // Материал без трения, упругости и плотности
+    PhysicsMaterial material(0.0f, 1.0f, 0.0f);  // Материал без трения, упругости и плотности
     Size colliderSize(1920, 64);  // Размеры коллайдера земли
     auto physicsBody = PhysicsBody::createBox(colliderSize, material);  // Создаём прямоугольное физическое тело для земли
 

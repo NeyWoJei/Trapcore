@@ -24,14 +24,6 @@ public:
     void update(float delta) override;
     bool CreatePlayer();
 
-    // Прыжок
-    void jump();
-
-
-
-
-    // Анимация ходьбы и ее инициализация
-    void playerAnimation();
 
 private:
     HelloWorld* _layer = nullptr;
@@ -41,8 +33,6 @@ private:
     cocos2d::Label* _coordinatesLabel = nullptr; // координаты игрока
     cocos2d::Label* _velocityLabel = nullptr; // скорость падения игрока
 
-    bool isJumping = false;       // Персонаж в прыжке
-    bool canDoubleJump = false;   // Разрешен второй прыжок
     bool _isMovingLeft = false;   // Движение влево
     bool _isMovingRight = false;  // Движение вправо
 };

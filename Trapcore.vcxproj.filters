@@ -31,6 +31,9 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\NeiPan\Camera.cpp">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h">
@@ -65,6 +68,9 @@
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NeiPan\Camera.h">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
