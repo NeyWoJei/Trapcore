@@ -32,11 +32,6 @@ bool Traps::init() {
         return false;
     }
 
-    // Создаем начальные ловушки
-    spawnBlackHole(600);  // Первая ловушка
-    spawnBlackHole(1300);  // Вторая ловушка
-    spawnBlackHole(1600);  // Третья ловушка
-
     return true;
 }
 
@@ -121,6 +116,9 @@ void Traps::update(float delta) {
 
 void Traps::onEnter() {
     Node::onEnter();
+
+    // Инициализация генератора случайных чисел
+    srand(time(0));
 
     // Добавляем обновление уровня (для проверки высоты игрока)
     schedule([this](float deltaTime) {

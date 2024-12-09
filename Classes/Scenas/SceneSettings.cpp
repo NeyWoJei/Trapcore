@@ -65,7 +65,7 @@ bool SceneSettings::init() {
         this->addChild(ExitToMenu, 1);
     }
 
-    auto SetVolume = Label::createWithTTF("VOLUME", FontPath, 24);
+    auto SetVolume = Label::createWithTTF("VOLUME", FontPath, 20);
     if (SetVolume) {
         // Установка позиции текста в центре экрана
         SetVolume->setPosition(Vec2(origin.x + visibleSize.width * 0.4,

@@ -170,6 +170,8 @@ void Level1::update(float delta) {
 void Level1::onEnter() {
     Node::onEnter();
 
+    srand(time(0)); 
+
     // Добавляем обновление уровня (для проверки высоты игрока)
     schedule([this](float deltaTime) {
         update(deltaTime);
