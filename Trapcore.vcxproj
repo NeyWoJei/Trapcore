@@ -832,26 +832,38 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Classes\NeiPan\Camera.h" />
+    <ClInclude Include="Classes\Traps.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\AppDelegate.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Config.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Levels\Level1.h" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Camera.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Scenas\SceneSettings.h" />
+    <ClInclude Include="Classes\TinoTesla\SoundsGame.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Start.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\main.h" />
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h" />
-    <ClCompile Include="Classes\NeiPan\Camera.cpp" />
+    <ClCompile Include="Classes\Traps.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\CMakeFiles\3.30.4\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\AppDelegate.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Levels\Level1.cpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Camera.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Player.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Scenas\SceneSettings.cpp" />
+    <ClCompile Include="Classes\TinoTesla\SoundsGame.cpp">
+      <ObjectFileName>$(IntDir)/Classes/TinoTesla/Sounds.cpp.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.cpp" />
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\json.hpp" />
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Sounds.cpp">
+      <ObjectFileName>$(IntDir)/Sounds.cpp.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Start.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\main.cpp" />
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp" />

@@ -10,6 +10,12 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.cpp">
       <Filter>Source Files\proj.win32\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Levels\Level1.cpp">
+      <Filter>Source Files\proj.win32\Classes\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Camera.cpp">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.cpp">
       <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
     </ClCompile>
@@ -19,8 +25,14 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Scenas\SceneSettings.cpp">
       <Filter>Source Files\proj.win32\Classes\Scenas</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\TinoTesla\SoundsGame.cpp">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
+    </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.cpp">
       <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
+    </ClCompile>
+    <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Sounds.cpp">
+      <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
     <ClCompile Include="J:\Dev\Projects\Trapcore\proj.win32\Start.cpp">
       <Filter>Source Files\proj.win32</Filter>
@@ -31,8 +43,8 @@
     <ClCompile Include="J:\Dev\Projects\Trapcore\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\NeiPan\Camera.cpp">
-      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    <ClCompile Include="Classes\Traps.cpp">
+      <Filter>Source Files\proj.win32\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +60,12 @@
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\HelloWorldScene.h">
       <Filter>Source Files\proj.win32\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Levels\Level1.h">
+      <Filter>Source Files\proj.win32\Classes\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\Camera.h">
+      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\NeiPan\NeiPanMain.h">
       <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
     </ClInclude>
@@ -56,6 +74,9 @@
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\Scenas\SceneSettings.h">
       <Filter>Source Files\proj.win32\Classes\Scenas</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\TinoTesla\SoundsGame.h">
+      <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
     </ClInclude>
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\TinoTesla\TinoTeslaMain.h">
       <Filter>Source Files\proj.win32\Classes\TinoTesla</Filter>
@@ -69,8 +90,11 @@
     <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\NeiPan\Camera.h">
-      <Filter>Source Files\proj.win32\Classes\NeiPan</Filter>
+    <ClInclude Include="J:\Dev\Projects\Trapcore\proj.win32\Classes\json.hpp">
+      <Filter>Source Files\proj.win32\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Traps.h">
+      <Filter>Source Files\proj.win32\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -95,8 +119,14 @@
     <Filter Include="Source Files\proj.win32\Classes">
       <UniqueIdentifier>{09996233-8494-3446-ACA8-64486FC2705A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\Levels">
+      <UniqueIdentifier>{D8107454-6C56-328D-9AF8-D85A6DD846EB}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\proj.win32\Classes\NeiPan">
       <UniqueIdentifier>{6E228C5D-14E1-3A6E-B7B3-C0DF3891F2C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32\Classes\NeiPan\Localization">
+      <UniqueIdentifier>{20CF39C3-27D2-36F3-8C72-D74AB04FC21A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\proj.win32\Classes\Scenas">
       <UniqueIdentifier>{49572868-A2A9-363E-A806-2848ED732097}</UniqueIdentifier>

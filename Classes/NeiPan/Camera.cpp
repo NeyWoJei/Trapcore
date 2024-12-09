@@ -12,7 +12,7 @@ bool CameraMain::init() {
 
     // Создаём новую камеру
     camera = Camera::create();
-    camera->setCameraFlag(CameraFlag::DEFAULT); // Устанавливаем как основную
+    camera->setCameraFlag(CameraFlag::USER1); // Устанавливаем как основную
     camera->setPosition3D(Vec3(0, 0, 500));     // Начальная позиция камеры
     camera->lookAt(Vec3(0, 0, 0));              // Камера смотрит на (0, 0, 0)
     this->addChild(camera);                     // Добавляем камеру в узел `CameraMain`
@@ -45,6 +45,6 @@ void CameraMain::setPlayer(Node* playerNode) {
 void CameraMain::updateCameraPosition(float delta) {
     if (player) {
         Vec2 playerPos = player->getPosition();  // Получаем позицию игрока
-        camera->setPosition3D(Vec3(300, playerPos.y + offsetY, 1000));  // Камера следует за игроком с некоторым смещением
+        camera->setPosition3D(Vec3(600, playerPos.y + offsetY, 1000)); 
     }
 }

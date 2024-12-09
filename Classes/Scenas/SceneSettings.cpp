@@ -1,4 +1,5 @@
 ﻿#include "Scenas/SceneSettings.h"
+#include "TinoTesla/SoundsGame.h"
 #include "TinoTesla/TinoTeslaMain.h"  // Подключаем заголовочный файл HelloWorld для перехода на первую сцену
 #include "ui/CocosGUI.h"
 #include "Config.h"
@@ -57,6 +58,8 @@ bool SceneSettings::init() {
         ExitToMenu->addClickEventListener([](Ref* sender) {
             auto scene = TinoTeslaMain::createScene(); // Создаем новую сцену
             Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene)); // Переход с эффектом затухания
+
+            SoundGame::getInstance()->playSound("ButtonSong.mp3", 0.2f);
            });
 
         this->addChild(ExitToMenu, 1);
@@ -110,6 +113,10 @@ bool SceneSettings::init() {
             // Обновляем текст метки с текущим значением процента
             int percent = slider->getPercent();
             PercentLabel->setString(std::to_string(percent));
+
+            auto slider = dynamic_cast<ui::Slider*>(sender);
+            float volume = slider->getPercent() / 100.0f;  // Преобразуем процент в диапазон [0.0, 1.0]
+            SoundGame::getInstance()->setVolume(volume);
         }
         });
 

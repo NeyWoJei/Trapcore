@@ -1,12 +1,16 @@
 ﻿#include "HelloWorldScene.h"
 #include "TinoTesla/TinoTeslaMain.h"
 #include "Config.h"
+#include "SoundsGame.h"
 #include "Scenas/SceneSettings.h"
 #include "ui/CocosGUI.h" // для использования UI-компонентов
+#include "Traps.h"
 
 USING_NS_CC;
 using namespace Config::UI;
 using namespace Config::General;
+
+bool isSoundOn = true;
 
 Scene* TinoTeslaMain::createScene()
 {
@@ -30,6 +34,8 @@ bool TinoTeslaMain::init()
     {
         return false;
     }
+
+    SoundGame::getInstance()->playBackgroundMusic("background_music.mp3");
 
     // Получаем размер экрана
     auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -60,19 +66,26 @@ bool TinoTeslaMain::init()
         Button->setTitleFontName(FontPath);
         Button->setTitleFontSize(TitleFontSizeLarge);
 
-        Button->addClickEventListener([](Ref* sender) {
-            auto Level1Scene = HelloWorld::createScene();
-            if (Level1Scene != nullptr)
+        Button->addClickEventListener([](Ref* sender)
             {
-                Director::getInstance()->replaceScene(TransitionFade::create(0.5, Level1Scene)); // Переход с эффектом затухания
-            }
-            else
-            {
-                CCLOG("Ошибка при создании сцены HelloWorld.");
-            }
-            });
+                auto Level1Scene = HelloWorld::createScene();
 
-        this->addChild(Button, 1);
+                if (Level1Scene != nullptr)
+                {
+                    // Отключаем звуки
+                    AudioEngine::pauseAll();
+
+                    SoundGame::getInstance()->playSound("ButtonSong.mp3", 0.2f);
+                    SoundGame::getInstance()->playSound("LevelSong.mp3", 0.2f);
+                    Director::getInstance()->replaceScene(TransitionFade::create(0.5, Level1Scene)); // Переход с эффектом затухания
+                }
+                else
+                {
+                    CCLOG("Ошибка при создании сцены HelloWorld.");
+                }
+        });
+                
+    this->addChild(Button, 1);
     }
     else
     {
@@ -94,13 +107,14 @@ bool TinoTeslaMain::init()
             auto scene = SceneSettings::create(); // Создаем новую сцену
             if (scene != nullptr)
             {
+                SoundGame::getInstance()->playSound("ButtonSong.mp3", 0.2f);
                 Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene)); // Переход с эффектом затухания
             }
             else
             {
                 CCLOG("Ошибка при создании сцены Settings.");
             }
-            });
+        });
 
         this->addChild(ButtonSettings, 1);
     }
